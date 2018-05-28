@@ -7,37 +7,53 @@
     </head>
     <body>
         <main>
-            <p id="para">
 
-            </p>
-            <input type="text" id="result" placeholder=" Perdu! C'est ma bite!" value=""/>
+            <input type="text" id="ecran" placeholder="Cqcacasc" value=""/>
             <input type="button" id="btn1" class="touch"  value="1"/>
             <input type="button" id="btn2" class="touch"  value="2"/>
             <input type="button" id="btn3" class="touch" value="3" />
-            <input type="button" id="btn+" class="touch"  value="+" />
+            <input type="button" id="btn+" class="touch opperator"  value="+" />
             <input type="button" id="btn4" class="touch"  value="4"/>
             <input type="button" id="btn5" class="touch"  value="5"/>
             <input type="button" id="btn6" class="touch"  value="6"/>
-            <input type="button" id="btn-" class="touch"  value="-"/>
+            <input type="button" id="btn-" class="touch opperator"  value="-"/>
             <input type="button" id="btn7" class="touch"  value="7"/>
             <input type="button" id="btn8" class="touch"  value="8"/>
             <input type="button" id="btn9" class="touch"  value="9" />
-            <input type="button" id="btn*" class="touch"  value="*"/>
+            <input type="button" id="btn*" class="touch opperator"  value="*"/>
             <input type="button" id="btn0" class="touch"  value="0"/>
-            <input type="button" id="btn=" class="touch"  value="=" />
-            <input type="button" id="btn/" class="touch"  value="/" />
+            <input type="button" id="btn=" class="touch result"  value="=" />
+            <input type="button" id="btn/" class="touch opperator"  value="/" />
 
             <script type="text/javascript">
-            var ecran = document.getElementById("result");
-            var btn1 = document.getElementById("btn1");
-            var btn = document.getElementsByClassName("touch")[2];
-            var para = document.getElementById('para')
-            
-            btn.addEventListener("click",text);
-            btn1.addEventListener("click",text);
-            function text(){
+            var ecran = document.getElementById("ecran");
+            var btn = document.getElementsByClassName("touch");
+            var opperator;
+            var op01 ;
+            var op02;
 
-                para.innerText += "valnew"
+            console.log(opperator);
+
+            for(var i=0;i<btn.length;i++){
+
+                btn[i].addEventListener("click",text);
+
+            }
+
+            function text(){
+                if (this.className == "touch opperator") {
+                     if (opperator == undefined) {
+                         opperator = this.value
+
+                     }
+                     else {
+                         
+                     }
+                }
+
+                ecran.value += this.value
+
+
 
             }
 
