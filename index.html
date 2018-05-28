@@ -7,7 +7,10 @@
     </head>
     <body>
         <main>
-            <input type="text" id="result" placeholder=" Perdu! C'est ma bite!"/>
+            <p id="para">
+
+            </p>
+            <input type="text" id="result" placeholder=" Perdu! C'est ma bite!" value=""/>
             <input type="button" id="btn1" class="touch"  value="1"/>
             <input type="button" id="btn2" class="touch"  value="2"/>
             <input type="button" id="btn3" class="touch" value="3" />
@@ -25,13 +28,16 @@
             <input type="button" id="btn/" class="touch"  value="/" />
 
             <script type="text/javascript">
-            var result = document.getElementById("result");
-            var touch = document.getElementsByClassName("touch")[2];
-
-            touch.addEventListener("click", text);
-
+            var ecran = document.getElementById("result");
+            var btn1 = document.getElementById("btn1");
+            var btn = document.getElementsByClassName("touch")[2];
+            var para = document.getElementById('para')
+            
+            btn.addEventListener("click",text);
+            btn1.addEventListener("click",text);
             function text(){
-                result.innerText("salut")
+
+                para.innerText += "valnew"
 
             }
 
