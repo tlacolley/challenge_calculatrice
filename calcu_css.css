@@ -1,0 +1,25 @@
+main{
+    width: 40%;
+    margin: auto;
+    background-color: pink;
+    box-sizing: border-box;
+}
+
+input{
+    margin: 1%;
+}
+
+#result{
+    display: block;
+    width: 98%;
+    box-sizing: border-box;
+
+}
+#btn\={
+    width:47%;
+}
+input[type="button"]{
+        width: 22%;
+        display: inline-block;
+
+}
